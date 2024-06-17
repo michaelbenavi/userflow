@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="https://oscarprodstrg.blob.core.windows.net/public/userflow/favicon.ico">
+	<title>Oscar - Login</title>
+	
+	<style>
+		body {
+			font-family: sans-serif;
+			background-image: url('https://oscarprodstrg.blob.core.windows.net/public/userflow/pic.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			float: left;
+			margin-left: 10rem;
+			margin-top: 10rem;
+		}
+		#continue{
+		/* display:none;*/
+		}	
+
+		h1 {
+			text-align: center;
+		}
+
+		.mainContainer {
+			width: 25rem;
+			margin: auto;
+			background-color:#ffffff;
+			//color: whitesmoke;
+			/*backdrop-filter: blur(16px) saturate(180%);
+			-webkit-backdrop-filter: blur(16px) saturate(180%);*/
+			/* background-color: rgba(11, 15, 13, 0.582); */
+			border-radius: 12px;
+			//border: 1px solid rgba(255, 255, 255, 0.125);
+			//border: 1px solid black;
+			padding: 20px 25px;
+			padding: 16px;
+			margin-top: 50px;
+		}
+
+		/* Chrome, Safari, Edge, Opera */
+		/*input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;*/
+		}
+
+		/* Firefox */
+		input[type=number] {
+			-moz-appearance: textfield;
+		}
+
+		input[type=text],
+		input[type=number],
+		input[type=password] {
+			width: 100%;
+			margin: 10px 0;
+			border-radius: 5px;
+box-sizing: border-box;
+  border: 1px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+			/*border: 1px solid #3915ed!important;*/
+			padding: 15px 18px;
+			
+		}
+
+
+input[type=text]:focus {
+  border: 1px solid #3915ed;
+}
+
+		button {
+			background-color: #3915ed;
+			color: white;
+			padding: 14px 20px;
+			border-radius: 5px;
+			border: none;
+			margin-bottom: 10px;
+			width: 100%;
+			font-size: 18px;
+			text-align:center;
+		}
+
+		button:hover {
+			opacity: 0.6;
+			cursor: pointer;
+		}
+
+		#cancel{
+		background-color:#0e024f;
+		}
+
+		.headingsContainer {
+			text-align: center;
+		}
+
+		.headingsContainer p {
+			color: gray;
+		}
+
+		.subcontainer {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.subcontainer a {
+			font-size: 16px;
+			margin-bottom: 12px;
+		}
+
+		span.forgotpsd a {
+			float: right;
+			color: whitesmoke;
+			padding-top: 16px;
+		}
+
+		.forgotpsd a {
+			color: #3915ed;
+		}
+
+		.forgotpsd a:link {
+			text-decoration: none;
+		}
+
+		.register {
+			color: white;
+			text-align: center;
+		}
+
+		.register a {
+			color: #3915ed;
+		}
+
+		.register a:link {
+			text-decoration: none;
+		}
+
+		
+
+		/* Media queries for the responsiveness of the page */
+		@media screen and (max-width: 600px) {
+			form {
+				/* width: 25rem; */
+			}
+		}
+
+		@media screen and (max-width: 400px) {
+			form {
+				width: 18rem;
+			}
+		}
+
+		#ChangePhoneNumber {
+			display: none;
+		}
+
+		li.DropdownSingleSelect.countryCode_li {
+			display: block
+		}
+
+		li.TextBox.nationalNumber_li {
+			display: block
+		}
+
+		a.helpLink.tiny {
+			display: none
+		}
+
+
+		select#countryCode {
+			width: 60%
+		}
+
+		ul {
+			padding: 0;
+		}
+
+		.heading h1 {
+			display: none
+		}
+
+		#api {
+			direction: ltr
+		}
+
+		.error.itemLevel p {
+			color: red
+		}
+
+		#next,
+		#continue,
+		#sendCode {
+			background-color: ##3915ed;
+			border: 0px;
+
+		}
+		#sendButton{
+			background-color:#3915ed;
+		}
+
+		.panel-body h1 {
+			color: red
+		}
+
+		.password-label {
+			display: block
+		}
+		
+		.intro{display:none}
+
+		/*#password {
+			display: none
+		}
+
+		#cancel {
+			display: none
+		}*/
+
+		.phoneNumber .type {
+			display: none
+		}
+
+		@media screen and (max-width: 600px) {
+			body {
+				width: 100%;
+				margin: 0;
+			}
+
+			.mainContainer {
+				width: auto;
+				margin: 15px;
+				margin-top: 150px;
+			}
+
+			.headingsContainer {
+				text-align: left;
+				margin-left: 10px;
+			}
+
+			.headingsContainer img {
+				background-color: rgba(255, 255, 255, 0.9);
+				width: 100px;
+				height: 100px;
+				margin-top: 14px;
+				border-radius: 13px;
+			}
+		}
+		@media screen and (min-width: 767px) {
+				.mainContainer {
+					margin-top: 65%;
+				}
+			}
+		
+		@media screen and (min-width: 1400px) {
+				.mainContainer {
+					margin-top: unset;
+				}
+			}
+	</style>
+
+</head>
+
+<body>
+
+	
+
+	<!-- Main container for all inputs -->
+	<div class="mainContainer">
+<!-- Headings for the form -->
+	<div class="headingsContainer">
+		<img width="120" height="120" src="https://oscarprodstrg.blob.core.windows.net/public/userflow/headerLogoNew.png" />
+
+	</div>
+		<div id="api"></div>
+	</div>
+
+	</div>
+<script src="https://oscarprodstrg.blob.core.windows.net/public/userflow/js.js"></script>
+</body>
+
+</html>
